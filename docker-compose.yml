@@ -1,7 +1,12 @@
 services:
   spark:
     build: .
-    command: python3 -m spark_practice.my_code
+    command: >
+      spark-submit 
+      --master local[*] 
+      --driver-memory 1g 
+      --executor-memory 1g 
+      /app/src/spark_practice/my_code.py
     volumes:
       - ./src:/app/src
       - ./data:/app/data

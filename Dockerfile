@@ -15,3 +15,7 @@ RUN pip3 install -r requirements.txt
 
 # Add src directory to PYTHONPATH
 ENV PYTHONPATH="/app/src:${PYTHONPATH}"
+
+# Ensure SPARK_HOME is set
+ENV SPARK_HOME=/opt/spark
+ENV PATH=$PATH:$SPARK_HOME/bin

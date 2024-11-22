@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "spark-practice"
+version = "0.1.0"
+description = ""
+authors = ["tanmay-kulkarni <ucanreachtvk@gmail.com>"]
+packages = [{include = "spark_practice", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyspark = "^3.5.3"
+pyclean = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

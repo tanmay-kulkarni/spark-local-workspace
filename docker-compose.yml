@@ -1,0 +1,9 @@
+services:
+  spark:
+    build: .
+    command: python3 -m spark_practice.my_code
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app/src
